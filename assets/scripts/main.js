@@ -1,4 +1,4 @@
-//setTimeout(function() { location.reload(); }, 20000);
+setTimeout(function() { location.reload(); }, 10000);
 
 var divEvent = document.getElementsByClassName('greeting')[0];
 var otherSide = document.getElementsByClassName('ending')[0];
