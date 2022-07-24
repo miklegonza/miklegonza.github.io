@@ -1,27 +1,105 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="I'm a systems engineer student ready
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm a systems engineer student ready
         to start my career path as a web developer">
-        <title>Mikle's Page</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
-    <body>
-        <header>
+    <title>Mikle's Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
             <p class="greeting">Hi! I'm Michael 👋</p>
-            <a href="">
-                <button class="ending">Resume</button>
-            </a>
-        </header>
-        <div class="content">
-            <img src="./assets/resources/palette.png" alt="My color palette">
+            <ul class="navbar-list">
+                <!--a class="navbar-button" href="#">
+                    <li class="navbar-item">Blog</button>
+                </a-->
+                <li class="navbar-item">
+                    <a href="#" class="navbar-button">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-button">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-button">Resume</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-button">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="about">
+            <img src="./assets/resources/profile.jpg" alt="Profile picture" class="profile">
+            <p class="description">
+                lil' description 'bout me
+            </p>
         </div>
-        <footer>
-            <a href="games">
-                <button class="ending">You'd like to go to the other side?</button>
-            </a>
-       </footer>
-        <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    </body>
+
+        <div class="projects">
+            <div class="card">
+                <img src="./assets/resources/" alt="Project 1" class="project">
+                <a href="#" class="demo">
+                    <p>Demo</p>
+                </a>
+                <a href="https://github.com/miklegonza/" class="github">
+                    <p>Repository</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="technologies">
+            <div class="icons">
+                <img src="" alt="">
+                <a href="#" class="docs">
+                    <p>Docs</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <form action="https://forms.un-static.com/forms/f05ff67d4bd04859bc53bf292038bda835113ad0" method="post">
+                <h1 class="title">Contact me</h1>
+                <input type="text" name="name" id="name" placeholder="Name" class="info" required>
+                <input type="text" name="org" id="org" placeholder="Organization" class="info" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" class="info" required>
+                <textarea name="message" id="message" placeholder="Message" class="info msg" required></textarea>
+                <button class="btn">Send</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="external">
+            <ul class="socialIcons">
+                <li><a href="https://github.com/miklegonza" aria-label="externalLinkTo-github" target="_blank"
+                        rel="me"><img
+                            src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViIGljb248L3RpdGxlPjxwYXRoIGZpbGw9IiM4MjgwOTEiIGQ9Ik0xMiAuMjk3Yy02LjYzIDAtMTIgNS4zNzMtMTIgMTIgMCA1LjMwMyAzLjQzOCA5LjggOC4yMDUgMTEuMzg1LjYuMTEzLjgyLS4yNTguODItLjU3NyAwLS4yODUtLjAxLTEuMDQtLjAxNS0yLjA0LTMuMzM4LjcyNC00LjA0Mi0xLjYxLTQuMDQyLTEuNjFDNC40MjIgMTguMDcgMy42MzMgMTcuNyAzLjYzMyAxNy43Yy0xLjA4Ny0uNzQ0LjA4NC0uNzI5LjA4NC0uNzI5IDEuMjA1LjA4NCAxLjgzOCAxLjIzNiAxLjgzOCAxLjIzNiAxLjA3IDEuODM1IDIuODA5IDEuMzA1IDMuNDk1Ljk5OC4xMDgtLjc3Ni40MTctMS4zMDUuNzYtMS42MDUtMi42NjUtLjMtNS40NjYtMS4zMzItNS40NjYtNS45MyAwLTEuMzEuNDY1LTIuMzggMS4yMzUtMy4yMi0uMTM1LS4zMDMtLjU0LTEuNTIzLjEwNS0zLjE3NiAwIDAgMS4wMDUtLjMyMiAzLjMgMS4yMy45Ni0uMjY3IDEuOTgtLjM5OSAzLS40MDUgMS4wMi4wMDYgMi4wNC4xMzggMyAuNDA1IDIuMjgtMS41NTIgMy4yODUtMS4yMyAzLjI4NS0xLjIzLjY0NSAxLjY1My4yNCAyLjg3My4xMiAzLjE3Ni43NjUuODQgMS4yMyAxLjkxIDEuMjMgMy4yMiAwIDQuNjEtMi44MDUgNS42MjUtNS40NzUgNS45Mi40Mi4zNi44MSAxLjA5Ni44MSAyLjIyIDAgMS42MDYtLjAxNSAyLjg5Ni0uMDE1IDMuMjg2IDAgLjMxNS4yMS42OS44MjUuNTdDMjAuNTY1IDIyLjA5MiAyNCAxNy41OTIgMjQgMTIuMjk3YzAtNi42MjctNS4zNzMtMTItMTItMTIiLz48L3N2Zz4K"
+                            alt="github-icon" class="socialIcon"></a></li>
+                <li><a href="mailto:gonzalez.michael1803@gmail.com" aria-label="externalLinkTo-Codepen" target="_blank"
+                        rel="me"><img
+                            src="data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAJVElEQVR4nO2cXWwU1xXH/2dmvQbWbb0utCGojUKlkkRVUxrahighARNwwAaadquoxeqCvXe9RlaF+hblYV/6VsmVXOGdmYUQWVEqiJI0hNTYGINDk36lTfqVUFKCEmqHNOWjZL222ZnTB8+2lMzYHu+Md03u78k7Z/ae6/PbubNzZ+4CEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIAoFKbSCVSi0vFArbFUW5n5lvBrAMwCdK71rFkQdwmYjOMvOrRNR/4cKFXxw8eHCilEZDpfbKNM3biehRZq4uta0KZyGAhcx8E4C7mTlRV1e3FUBvKY0qpfZK1/XDRLQNwFipbc0jJojoO5qmlVR8wIchqIgQYgOA5zD5SbmRmWDmmGEYz/vRWMlHQBFd1/sAbMPkWHmjMkFE3/ar+IBHAUKIKiHEj+By5Oi63kdEW3FjShhj5i2aph1y20EI8cN0Ou2ppp52JqIHATyaSCQMt0SapvUTUROAUS9tVzh5ItpiGMYRlzglk8mfAPjxyMjIvV4a9iTAsqw1AEBELSMjI3unkDAAoBFAzkv7FcooETVpmtbvEichRBcz/8B+Xe+lca9HwPLi38wcHx4efjKdTjt+ldV1fRBAA4ArXnJUGKNEtMX+QDlBQoguALuKG5j5S14SeD0JL77u9SPDw8NPxGIx1WlnXddPElEjgA895qkEcoqibHYrfjqdVoQQOq4pPgAQ0S1ekngV8BmHbd+NRqNPCSGqnN6gadqQoigNAP7tMVc5yQFoymQyx52C6XRaGRkZ2Qug9foYM9d4SeRVwCKX7TEArhIymcwvmfkhzA8JOUVRGu0h9CPEYjF1eHh4HzPHXd4f9pLMt+sAAN8C8GxHR4fjlIRhGC9blrUOwEUfc/pNjpk3u33yY7GYGo1GHwfwfb8S+ikAADaPjY09E4/HFzgFs9nsq5ZlPQjggs95/eAyET1oGMYJp2AsFlPr6uqeANDsZ1K/BYCINoXD4WenkgCg0iRctiyrQdO0V5yCQoiqaDR6gJm/53di3wXYNFRXVz+3e/dux3khXdd/ryjKegD/Cii/Fy4D2JjNZn/lFIzFYmEABwA8HETyoASAmTfmcjlXCZlM5g/MXG4JlxRF2aDr+q+dgrFYLFxbW3sAk3NcgRCYAJsNuVyut7293fGrmWEYr9kSPgi4H05cYuYNmUzmN07Bjo6O6mg0+rQ9txUYQQsAgDWmab64c+dOx7tkhmG8RkRzLeGifcL9rVNw9+7dC8fGxg4BaAq6I3MhAMx8XygUcpWgadrr9jzTe3PQnYtEtEHTtN85BYUQi3K53PP2xGPgzIkAm3tDoVBvR0fHJ52C2Wz2Dfs6YSTAPvzTsqwHpio+ER0CsD7APvwfcykAAO4ZHx8fSKVSUadgNpt9A0BQEt4HUJ/NZv/oFGxubo4AeIGZ1wWQ25W5FgAAqyzL6m9paalzCuq6/qaqqmsBDPuY831FUep1Xf+TU7C9vb1m4cKFhwGs9THnjCiHADDzXaqqHt21a9enneLd3d2nVFVdB38knFcUpT6TyfzZKSiE+JRpmv0A7vchl2fKIsBm5dWrV48KIa6f4gYwKYGZ1wL4Rwk5zjOza/Hj8XgtgCPMfHcJOUqinAIA4CsAXCUYhvE3IpqthPeIaJ1hGH9xCsbj8dpwONwH4BuzaNs3yi0AAO4EMLBjx44lTkFN007bEs55aPMcEa3RNO2vTkEhxOJwODwI4Gveu+svlSAAzHyFiFwf7NI07bSiKPcBODuD5t41TXOtpmmnp9hnFBUyLV52AUT0UlVVVcO+ffumvHecyWTOqqpaD+DUFLu9parqA3v37n1rqrZ0XR8NhUJbAAzNosu+UlYBRPSSqqqb9uzZM6N7xt3d3WdUVV3NzE87hJ8BsLq7u/vMTNras2fPh/l8fhPKLMHTo4lCiDMAbvUp91AoFNo80+JfT1tb20rTNOsBXGXmQbcLrOlobm6O2NcAfn0NfVvX9eXT7zZJuQScLBQKm9yGnUQi8UUietyyrO3ZbPbtUhK1t7d/rlAo/MyyrJSbpOIUhE9XwZ4ElGMIOhkKhR6apviDAO5RFOV4KpWa8T9zPS0tLbcUCoViW0dbW1u/7LSfruujzNxERMdmm2u2zKkAZj6ez+cb3IadVCq1goiOA7jZ3vR50zSHksnkKq+52travq6q6ssAvmBvWjKdhNHR0S3M7HhDPijmUsAgEW3u6elxfFwxlUqtME1zEMDS60LLmPlEIpF4ZKaJksnkdsuyTuB/IossURRlwE1CT09PbmxsrBGA4yMpQTAnAuxDu1HXdccHdoUQt7kUv8giInpKCPHzqY6GZDK5KplMHmLmHgCODwUAWDydBEw+1zonEgI/CRPRMWZumqr4AI7BvfhOnCKiVyzLOmfnWAZgNYDbPLTxARGt1zTtdZd+LQLwArzPkFbUSXhIVdWtbsVPpVIrAAzAW/EBYAUzx4noMSJ6DMAOeCs+ACxm5kG3I8ruc6Pdv8AIUsBQPp93vciyx/xj+Og4PZdEmblvGglbABwNqgOBCGDm/kgk0jDNCbfcxS8yrYRIJBKYBN8FMHN/TU3N1s7OTsdlShVW/CJRZu53k9DZ2ZkPSoLfAvrmYfGL1JZDgp8C+iKRyLZ5Wvwitczcn0gkHO8TBCHBq4CrLttvhOIXqSWivhIkePrpAq8CnL7R9E5MTLgOO62trbebpnnt9MJ8oJaIetva2lY6BaeR4GlholcB71z7goiOTExMfHP//v2Od7NSqdQKRVEGANzkMU8lUGdZ1rGpjoTq6upGAIev3c7M73pJ4nWV5H+nc5n5xXA4vNWt+Mlk8g7TNE/A+0VWJVFLRL1CiK86Bbu6usYjkUiMma9dwvqmlwRej4ABYLL4CxYseLirq2vcaadkMnkHMx8D8FmP7VcidQD63SR0dnbma2pqtgLoszc5rrBxw5OApUuXngTw049R8YvUATja2tp6l1PQPidsI6InL1265GnqwrdfSwFmPbE2n7ikKMpGtzUFs8HPn6u50YtfxFcJvgj4GBW/yGVFUVxX13ihZAH2mD8I51X0NzJTLvSYKSX/Zlw4HP77+Ph4EkA9Ed3JzEsALAHg+OTzPOcKJp9TfQfAYVVVz5e5PxKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSNz4Dy3C2CatbvtdAAAAAElFTkSuQmCC"
+                            alt="mail-icon" class="socialIcon"></a></li>
+                <li><a href="https://www.linkedin.com/in/michael-gonzalez-dev/" aria-label="externalLinkTo-linkedin"
+                        target="_blank" rel="me"><img
+                            src="data:image/svg+xml;base64,PHN2ZyAgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkxpbmtlZEluIGljb248L3RpdGxlPjxwYXRoIGZpbGw9IiM4MjgwOTEiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPg=="
+                            alt="linkedin-icon" class="socialIcon"></a></li>
+            </ul>
+        </div>
+        <p class="copyrigth">
+            Made with
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLXJlYWN0cm9vdD0iIj4KPHBhdGggZmlsbD0iI2RmZTFmZiIgZD0iTTIwLjM5OTkgNC42MkMxOS4zMzk5IDMuNTQgMTcuOTQ5OSAzIDE2LjUzOTkgM0MxNS4xNDk5IDMgMTMuNzQ5OSAzLjU0IDEyLjY3OTkgNC42MkwxMS45OTk5IDUuMzFMMTEuMzE5OSA0LjYyQzEwLjI0OTkgMy41NCA4Ljg0OTk0IDMgNy40NDk5NCAzQzYuMDQ5OTQgMyA0LjY1OTk0IDMuNTQgMy41OTk5NCA0LjYyQzEuNDY5OTQgNi44IDEuNDY5OTQgMTAuMyAzLjU5OTk0IDEyLjQ2TDEyLjAwOTkgMjFMMTkuNzE5OSAxMy4xNkwyMC4zOTk5IDEyLjQ3QzIyLjUyOTkgMTAuMyAyMi41Mjk5IDYuOCAyMC4zOTk5IDQuNjJaIiB1bmRlZmluZWQ9IjEiPjwvcGF0aD4KPC9zdmc+Cg=="
+                alt="Heart" class="footerIcon">
+            <br>
+            © Michael González 2022
+        </p>
+    </footer>
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+</body>
+
 </html>

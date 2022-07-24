@@ -1,16 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap");
+
 :root {
-    
+    --dark-primary: #222426;
+    --dark-second: #a63841;
+    --dark-third: #9067c6;
+    --dark-fourth: #fbfbff;
+    --light-primary: #dddbd9;
+    --light-second: #59c7be;
+    --light-third: #6f9839;
+    --light-fourth: #040400;
+    --text: "Poppins", sans-serif;
+    --console: "Roboto Mono", monospace;
 }
 
 body {
     margin: 0;
-    background-color: #222426;
-    text-align: center;
+    background-color: var(--dark-primary);
+    color: var(--dark-fourth);
+    font-family: var(--text);
 }
 
 header {
-    background-color: #A63841;
-    text-align: center;
+    background-color: var(--dark-second);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 footer {
@@ -20,34 +34,147 @@ footer {
 
 .greeting {
     display: inline-block;
-    color: white;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 35px;
+    color: var(--dark-fourth);
+    font-family: var(--text);
+    font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    margin: 1.2rem;
 }
 
-img {
-    max-width: 80%;
-    max-height: 80%;
+.navbar {
+    padding-left: 2rem;
+}
+
+.navbar .navbar-list {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar .navbar-item {
+    float: right;
+}
+
+.navbar .navbar-button {
+    display: block;
+    color: var(--dark-fourth);
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-button:hover {
+    background-color: var(--dark-third);
 }
 
 .content {
-    margin: 50px auto;
+    margin-top: 74.4px;
+}
+
+.profile {
+    width: 15rem;
+    margin: 2rem;
+}
+
+.contact {
+    margin: auto;
+    padding: 1.5rem;
+    text-align: center;
+    width: 400px;
+}
+
+.contact .title {
+    font-size: 2.6rem;
+    color: var(--dark-fourth);
+}
+
+.contact form {
+    margin: auto;
+}
+
+.contact .info {
+    font-family: var(--text);
+    font-size: medium;
+    outline: none;
+    background-color: var(--dark-fourth);
+    margin: 0.5rem auto;
+    border-style: none;
+    border-bottom: 4px solid var(--dark-second);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    width: 100%;
+    height: 3rem;
+}
+
+.contact .info:focus {
+    border-bottom: 4px solid var(--dark-third);
+}
+
+.contact .msg {
+    font-family: var(--text);
+    width: 100%;
+    height: 8rem;
+    resize: none;
+}
+
+.contact .btn {
+    margin: 0.5rem auto;
+    border: 0;
+    width: 8rem;
+    background-color: var(--dark-second);
+    color: var(--dark-fourth);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    display: block;
+    font-size: 1.3rem;
+    font-family: var(--text);
+    transition: all 0.3s ease;
+}
+
+.contact .btn:hover {
+    cursor: pointer;
+    background-color: var(--dark-third);
+}
+
+.socialIcon {
+    width: 2rem;
+}
+
+.socialIcons {
+    list-style-type: none;
 }
 
 .ending {
     padding: 20px;
-    background-color: #A63841;
+    background-color: var(--dark-second);
     border: 0px;
     border-radius: 15px;
-    color: white;
-    font-family: Helvetica, Arial, sans-serif;
+    color: var(--dark-fourth);
+    font-family: var(--text);
     font-size: 15px;
     font-weight: bold;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .ending:hover {
-    background-color: #9067c6;
+    background-color: var(--dark-third);
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-list .navbar-item {
+        float: none;
+    }
+
+    .greeting {
+        width: 100%;
+    }
+
+    .navbar {
+        padding-left: 0;
+    }
 }
